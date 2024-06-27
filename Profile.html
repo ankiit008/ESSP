@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Profile</title>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <style>
+         ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #d99e9e; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888; 
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('https://d2ah634u9nypif.cloudfront.net/wp-content/uploads/2019/01/banner-new-2.jpg') no-repeat center center/cover;
+        }
+        .form-control:focus {
+            background-color: #d99e9e;
+            box-shadow: none;
+            border-color: #8f1919;
+        }
+        .profile-button {
+            background: linear-gradient(to right, #810606, #a20f0fcd, #d11a1ad7, #810606);
+            box-shadow: none;
+            border: none;
+        }
+        .profile-button:hover {
+            background-color: #810606;
+            color: white;
+        }
+        .profile-button:focus {
+            background: #62100e;
+            box-shadow: none;
+        }
+        .profile-button:active {
+            background: #732727;
+            box-shadow: none;
+        }
+        .back:hover {
+            color: #732727;
+            cursor: pointer;
+        }
+        .labels {
+            font-size: 11px;
+        }
+        .add-experience:hover {
+            background: maroon;
+            color: #fff;
+            cursor: pointer;
+            border: solid 1px rgba(128, 0, 0, 0.34);
+        }
+        .file-upload {
+            display: none;
+        }
+        .upload-button {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container rounded bg-white mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-3 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                    <img id="profile-img" class="rounded-circle mt-5" width="150px" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
+                    <label for="file-upload" class="upload-button btn btn-primary mt-2">Upload Picture</label>
+                    <input id="file-upload" class="file-upload" type="file" accept="image/*">
+                    <span class="font-weight-bold">Your Name</span>
+                    <span id="user-id" class="text-black-50">User ID: 12345</span>
+                </div>
+            </div>
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5">
+                    <form action="save_profile.php" method="post">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="text-right">Profile Settings</h4>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-6">
+                                <label class="labels">Father's Name</label>
+                                <input id="father-name" name="father_name" type="text" class="form-control" placeholder="Father Name" pattern="[A-Za-z\s]+" title="Please enter a valid name without numbers" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="labels">Mother's Name</label>
+                                <input id="mother-name" name="mother_name" type="text" class="form-control" placeholder="Mother Name" pattern="[A-Za-z\s]+" title="Please enter a valid name without numbers" required>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label class="labels">Blood Group</label>
+                                <input type="text" name="blood_group" class="form-control" placeholder="Blood Group">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="labels">Permanent Address</label>
+                                <input type="text" name="permanent_address" class="form-control" placeholder="Enter Permanent Address">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="labels">Current Address</label>
+                                <input type="text" name="current_address" class="form-control" placeholder="Enter Current Address">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="labels">Postcode</label>
+                                <input type="text" name="postcode" class="form-control" placeholder="Postcode">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="labels">State</label>
+                                <input type="text" name="state" class="form-control" placeholder="State">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="labels">Area</label>
+                                <input type="text" name="area" class="form-control" placeholder="Area">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="labels">Nationality</label>
+                                <input type="text" name="nationality" class="form-control" placeholder="Nationality">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="labels">Qualification</label>
+                                <input type="text" name="qualification" class="form-control" placeholder="Qualification">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="labels">Designation</label>
+                                <input type="text" name="designation" class="form-control" placeholder="Designation">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label class="labels">Marital Status</label>
+                                <input type="text" name="marital_status" class="form-control" placeholder="Marital Status">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="labels">Spouse Name</label>
+                                <input id="spouse-name" name="spouse_name" type="text" class="form-control" placeholder="Spouse Name" pattern="[A-Za-z\s]+" title="Please enter a valid name without numbers" required>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label class="labels">Current Designation</label>
+                                <input type="text" name="current_designation" class="form-control" placeholder="Current Designation">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="labels">Join Position</label>
+                                <input type="text" name="join_position" class="form-control" placeholder="Join Position">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="labels">Joining Date</label>
+                                <input type="date" name="joining_date" class="form-control" placeholder="Joining Date">
+                            </div>
+                        </div>
+                        <div class="mt-5 text-center">
+                            <button class="btn btn-primary profile-button" type="submit">Save Profile</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js'></script>
+    <script>
+        document.getElementById('file-upload').addEventListener('change', function(e) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('profile-img').src = e.target.result;
+            }
+            reader.readAsDataURL(this.files[0]);
+        });
+
+        const nameInputs = ['father-name', 'mother-name', 'spouse-name'];
+
+        nameInputs.forEach(id => {
+            document.getElementById(id).addEventListener('input', function(e) {
+                this.value = this.value.replace(/[^A-Za-z\s]/g, '');
+            });
+        });
+    </script>
+</body>
+</html>

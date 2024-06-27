@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #e1d7d7;
+    color: #b12424;
+    padding: 10px 0;
+}
+.bg-primary-text-white{
+    background-color: #900000;
+
+}
+
+
+.nav-container{
+    align-content: center;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #090101;
+    text-decoration: none;
+}
+
+.hero-section {
+     
+    filter: brightness(90%);
+    background: url('https://d2ah634u9nypif.cloudfront.net/wp-content/uploads/2019/01/banner-new-2.jpg') no-repeat center center/cover;
+    
+    color: #fcf8f8e5;
+    
+    
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 700px;
+   
+}
+
+.cta-button {
+    background-color: #920417;
+    color: #fbf4f4;
+    padding: 15px 60px;
+    text-decoration: none;
+    border-radius: 12px;
+}
+.cta-button:hover {
+    background-color: #45a049;
+    color: #fbf4f4;
+    padding: 15px 60px;
+    text-decoration: none;
+    border-radius: 12px;
+}
+
+.about-section, .services-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background: #eadddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    flex-basis: 45%;
+    box-sizing: border-box;
+}
+footer.bg-dark-text-white-text-center-py-3 {
+    background-color: #900000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-links {
+    color: #fff;
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline;
+    margin-left: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+}
+.card{
+    transition: transform 0.5s;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+.card-body:hover{
+    background-color: rgb(221,97,97);
+    color:rgb(0,0,0);
+}
+.service-item:hover{
+    background-color: rgb(216,55,55);
+    color:rgb(0,0,0);
+}

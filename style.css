@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #515151;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+.marquee-container {
+    margin-top: 10px;
+}
+.logo {
+    margin-right: auto;
+}
+.card-body .btn{
+    background-color: rgb(144, 20, 20);
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: rgb(17, 93, 159);
+}
+
+.carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+}
+
+
+footer {
+    background: #333;
+    color: #fff;
+}
+footer.bg-dark-text-white-text-center-py-3 {
+    background-color: #900000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
